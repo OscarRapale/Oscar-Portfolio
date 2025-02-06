@@ -141,33 +141,20 @@ section .main-container {
   align-items: center;
 }
 
-.main-container .image {
-  width: 500px;
-  height: 80vh;
-  border-radius: 100%;
-  overflow: hidden;
-  box-shadow: 0 0 50px #1785ad;
-}
-
 .main-container .image img {
   width: 100%;
 }
 
-.main-container .image:hover {
-  animation: animate 1.5s ease-in-out;
+.main-container .image img {
+  animation: float 3s ease-in-out infinite;
 }
 
-@keyframes animate {
-  0% {
-    scale: 1;
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
   }
-
   50% {
-    scale: 1.05;
-  }
-
-  100% {
-    scale: 1;
+    transform: translateY(-50px);
   }
 }
 
@@ -343,6 +330,7 @@ section .button button:hover {
 
 .skills {
   background: black;
+  margin-top: -16rem;
 }
 
 .skills .content {
@@ -453,6 +441,20 @@ section .button button:hover {
 
 .contact {
   background: black;
+  margin-top: -16rem;
+}
+
+.contact p {
+  color: white;
+}
+
+.contact a {
+  color: white;
+  text-decoration: underline;
+}
+
+.contact a:hover {
+  color: #1785ad;
 }
 
 .contact .content {
@@ -465,6 +467,8 @@ section .button button:hover {
   text-align: center;
   margin: auto;
 }
+
+/* Footer styling */
 
 footer {
   background: #1785ad;
@@ -500,6 +504,8 @@ footer .text span a:hover {
   box-shadow: rgba(0, 0, 0, 0.15);
   display: none;
 }
+
+/* Mobile screen styling */
 
 @media (max-width: 1000px) {
   .about .about-details {
@@ -568,6 +574,10 @@ footer .text span a:hover {
     height: 60%;
   }
 
+  .skills {
+    margin-top: 10px;
+  }
+
   .skills .skills-details {
     align-items: center;
     justify-content: center;
@@ -590,6 +600,10 @@ footer .text span a:hover {
     width: 100%;
   }
 
+  .contact {
+    margin-top: 10px;
+  }
+
   .contact .text {
     width: 100%;
   }
@@ -607,6 +621,12 @@ footer .text span a:hover {
 
     .main-container button {
       margin-top: 15px;
+    }
+
+    /* button text size for smaller screens */
+    section .button button,
+    .content button {
+      font-size: 14px;
     }
   }
 }
