@@ -1,4 +1,4 @@
-# Oscar-Portfolio
+# Oscar Rapale-Personal Portfolio
 
 A personal portfolio website showcasing my projects, skills, and professional experience.
 
